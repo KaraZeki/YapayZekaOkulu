@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Site Metas -->
+<title>Yapa Zeka-Eğitim Okulu </title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+/*hello*/
+<!-- Site Icons -->
+<link rel="shortcut icon" href="images/education.png" type="image/x-icon" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Site CSS -->
+<link rel="stylesheet" href="style.css">
+<!-- ALL VERSION CSS -->
+<link rel="stylesheet" href="css/versions.css">
+<!-- Responsive CSS -->
+<link rel="stylesheet" href="css/responsive.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/custom.css">
+
+<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+<!-- Modernizer for Portfolio -->
+<script src="js/modernizer.js"></script>
+
+
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="host_version">
+
+    <!-- Modal -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header tit-up">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Örenci Kayıt</h4>
+                </div>
+                <div class="modal-body customer-box">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li><a class="active" href="#Login" data-toggle="tab">Giriş</a></li>
+                        <li><a href="#Registration" data-toggle="tab">Kayıt Ol</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="Login">
+                            <form role="form" class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input class="form-control" id="email1" placeholder="Email" type="email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input class="form-control" id="password1" placeholder="Şifre" type="password">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+                                            Giriş
+                                        </button>
+                                        <a class="for-pwd" href="javascript:;">Şifrenizi mi unuttunuz?</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="Registration">
+                            <form role="form" class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input class="form-control" placeholder="Ad" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input class="form-control" id="email" placeholder="Email" type="email"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input class="form-control" id="telefon" placeholder="Telefon" type="tel"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input class="form-control required" id="password" placeholder="Şifre"
+                                            type="password" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <button type="button" class="btn btn-light btn-radius btn-brd grd1">
+                                            Kaydet &amp; Devam
+                                        </button>
+                                        <button type="button" class="btn btn-light btn-radius btn-brd grd1">
+                                            İptal</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="progress-br float shadow">
+                <div class="progress__item"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END LOADER -->
+
+    <!-- Start header -->
+    <header class="top-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/education.png" alt="" />
+                    <strong style="color: white;"> Yapay Zeka Okulu</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host"
+                    aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbars-host">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Anasayfa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda </a></li>
+                        <li class="nav-item"><a class="nav-link" href="course-grid-2.html">Kurslar </a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog </a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="teachers.html">Teachers</a></li> -->
+                        <!-- <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal"
+                                data-target="#login"><span>Okula Katıl</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End header -->
+    <div class="section-title row text-center">
+        <div class="col-md-8 offset-md-2">
+            <h3>Amaç</h3>
+            <p class="lead">Aşağıda seçtiğiniz panda seçtiğniz resimlere göre davranış sergileyecektir. Sol tarafta
+                seçtiğin bir fotoğraf eğer gülem surata ait ise panda oynamaya başlayacak değilse panda utanacak.</p>
+        </div>
+    </div><!-- end title -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="image-blog">
+                    <img src="images/Postacı.jpg" alt="" class="img-fluid">
+                </div>
+            
+            
+
+    </div>
+
+    <div class="section-title row text-center">
+        <div class="col-md-8 offset-md-2">
+            <h3>Hadi Başlayalım</h3>
+            <p class="lead">Önce oluştuacağımız projeye bir isim verelim.</p>
+        </div>
+    </div><!-- end title -->
+    <div class="spinner-grow text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <div class="container" id="createProject">
+        <form>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Proje Adı" id="projeAdi" required >
+                </div>
+                <div class="col">
+
+                    <button type="button" class="btn btn-primary mb-2" id="btnOlustur" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" >
+                    <img src="images/shapes-and-symbols.png" > Proje
+                        Oluştur </button>
+                </div>
+            </div>
+        </form>
+   /*hello*/
+    </div>
+    <div class="section-title row text-center" id="contTextMakEgit">
+        <div class="col-md-8 offset-md-2">
+            <h3>Şimdi makinemizi eğitelim</h3>
+            <p class="lead">Aşşagıdaki el yazısı resimlerini posta kodlarına göre aşagıdaki kısımlarda  ayırıyoruz ve makinemize öğretmeye başlıyoruz. </p>
+            <p> örnk:Oxford=OX           GuildFord=GU         SoutHampton =SO            </p>
+            
+        </div>
+    </div><!-- end title -->
+
+    <center>
+        <div class="lds-facebook" id="ldsProjeOlustur"><div></div><div></div><div></div></div>
+    </center>
+   
+    <center>
+        
+        <div class="container" id="TumrResimler">
+            <strong id="strongProjeAdi">Proje Adı</strong>
+           
+            <div class="row" id="mlPhotos">
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/gu1.png" draggable="true" ondragstart="drag(event)"
+                        id="drag33" width="70" height="60" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/so1.png" draggable="true" ondragstart="drag(event)"
+                        id="drag32" width="70" height="60" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/gu2.png" draggable="true" ondragstart="drag(event)"
+                        id="drag31" width="88" height="31" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/gu3.png" draggable="true" ondragstart="drag(event)"
+                        id="drag30" width="88" height="31" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/ox1.png" draggable="true" ondragstart="drag(event)"
+                        id="drag29" width="88" height="31" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/so2.png" draggable="true" ondragstart="drag(event)"
+                        id="drag28" width="88" height="31" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/so3.png" draggable="true" ondragstart="drag(event)"
+                        id="drag27" width="88" height="31" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/ox2.png" draggable="true" ondragstart="drag(event)"
+                        id="drag26" width="88" height="31" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/ox3.png" draggable="true" ondragstart="drag(event)"
+                        id="drag25" width="88" height="31" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/gu4.png" draggable="true" ondragstart="drag(event)"
+                        id="drag24" width="88" height="31" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/gu5.png" draggable="true" ondragstart="drag(event)"
+                        id="drag23" width="88" height="31" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/ox4.png" draggable="true" ondragstart="drag(event)"
+                        id="drag22" width="88" height="31" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/so4.png" draggable="true" ondragstart="drag(event)"
+                        id="drag21" width="88" height="31" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/so5.png" draggable="true" ondragstart="drag(event)"
+                        id="drag20" width="88" height="31" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/ox5.png" draggable="true" ondragstart="drag(event)"
+                        id="drag19" width="88" height="31" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/ox6.png" draggable="true" ondragstart="drag(event)"
+                        id="drag18" width="88" height="31" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/ox7.png" draggable="true" ondragstart="drag(event)"
+                        id="drag17" width="88" height="31" class="img-thumbnail">
+                </div>
+
+
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/ox8.png" draggable="true" ondragstart="drag(event)"
+                        id="drag16" width="88" height="31" class="img-thumbnail">
+                </div>
+
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/gu6.png" draggable="true"
+                        ondragstart="drag(event)" id="drag15" width="88" height="31" class="img-thumbnail">
+                </div>
+
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/so6.png" draggable="true"
+                        ondragstart="drag(event)" id="drag14" width="88" height="31" class="img-thumbnail">
+                </div>
+
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/so7.png" draggable="true" ondragstart="drag(event)"
+                        id="drag13" width="88" height="31" class="img-thumbnail">
+                </div>
+
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/so8.png" draggable="true" ondragstart="drag(event)"
+                        id="drag12" width="88" height="31" class="img-thumbnail">
+                </div>
+
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/gu7.png" draggable="true" ondragstart="drag(event)"
+                        id="drag11" width="88" height="31" class="img-thumbnail">
+                </div>
+
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/gu8.png" draggable="true" ondragstart="drag(event)"
+                        id="drag10" width="88" height="31" class="img-thumbnail">
+                </div>
+
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/ox9.png" draggable="true" ondragstart="drag(event)"
+                        id="drag9" width="88" height="31" class="img-thumbnail">
+                </div>
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/so9.png" draggable="true" ondragstart="drag(event)"
+                        id="drag8" width="88" height="31" class="img-thumbnail">
+                </div>
+
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/so10.png" draggable="true" ondragstart="drag(event)"
+                        id="drag7" width="88" height="31" class="img-thumbnail">
+                </div>
+
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/ox10.png" draggable="true" ondragstart="drag(event)"
+                        id="drag6" width="88" height="31" class="img-thumbnail">
+                </div>
+
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/gu9.png" draggable="true" ondragstart="drag(event)"
+                        id="drag5" width="88" height="31" class="img-thumbnail">
+                </div>
+
+                <div class="col-md3" id="selectPhoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/PostaKısaltma/gu10.png" draggable="true" ondragstart="drag(event)"
+                        id="drag4" width="88" height="31" class="img-thumbnail">
+                </div>
+
+                
+
+            </div>
+
+        </div>
+       
+        <div class="container mb-6" id="AyrilanResimler">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card" id="cardgulen">
+                        <div class="card-header">
+                            OxFord
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                </div>
+                
+                <div class="col-md-4">
+
+                    <div class="card" id="cardUtanan">
+                        <div class="card-header">
+                            GuildFord
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+
+                    <div class="card" id="cardUtanan">
+                        <div class="card-header">
+                            SoutHampton
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            <div class="col-md-2" id="dragphoto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+               
+                
+            </div>
+        </div>
+        <div class="container mb-4" id="contButtonGrup">
+            <center>
+                <button type="button" class="btn btn-outline-info" id="projeGerial"><img src="images/return.png"></button>
+                <button type="button" class="btn btn-outline-info" id="projeCalistir"><img src="images/arrow.png"></button>
+                <button type="button" class="btn btn-outline-info" id="projeiptal"><img src="images/close.png"></button>
+            </center>
+        </div>
+        <center>
+            <div class="lds-facebook" id="prjeCalistir"><div></div><div></div><div></div></div>
+        </center>
+        <div class="section-title row text-center" id="contTestText">
+            <div class="col-md-8 offset-md-2">
+                <h3>Şimdi de test etme zamanı </h3>
+                <p class="lead">Sol alt taraftaki "Dosya Seç" butonu ile kendi bilgisayarınızdan bir fotoğraf ekleyiniz.Eklediğiniz fotoğrafta yazıya bakarak hangi şehire postanın gidecegini postacı öğrenecek ve postacının üstünde gidecegi şehir yazacaktır.</p>
+            </div>
+        </div><!-- end title -->
+        <div class="container mb-4" id="contResimTestet">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card" id="cardgulen">
+                        <div class="card-header">
+                            Hareketli Panda
+                        </div>
+                        <div class="row">
+
+                            <div class="image-blog ml-4">
+                                <img src="images/Postacı.jpg" id="firsPanda" alt="" class="img-fluid">
+                                <img src="images/dancepanda.gif"  id="dancePanda" alt="" class="img-fluid">
+                                <img src="images/shamepanda.gif" id="shamePanda" alt="" class="img-fluid"> 
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                </div>
+                
+                <div class="col-md-6">
+
+                    <div class="card" id="cardUtanan">
+                        <div class="card-header">
+                            Seçtiğiniz fotoğraflar
+                        </div>
+
+                        <div class="row" id="cardfotosec">
+                            <div class="image-blog ml-4">
+                            <img src="images/Postacı.jpg" id="firsPanda" alt="" class="img-fluid">
+                            
+                        </div>
+                            <input type='file' onchange="readURL(this);" />
+                        </div>
+
+                    </div>
+                </div>
+               
+                
+            </div>
+        </div>
+    </center>
+   
+    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>About US</h3>
+                        </div>
+                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
+                            bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis
+                            dis montes.</p>
+                        <div class="footer-right">
+                            <ul class="footer-links-soi">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            </ul><!-- end links -->
+                        </div>
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Information Link</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Contact Details</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:#">info@yoursite.com</a></li>
+                            <li><a href="#">www.yoursite.com</a></li>
+                            <li>PO Box 16122 Collins Street West Victoria 8007 Australia</li>
+                            <li>+61 3 8376 6284</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-center">
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">SmartEDU</a> Design By :
+                        <a href="https://html.design/">html design</a></p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/timeline.min.js"></script>
+    <script>
+        timeline(document.querySelectorAll('.timeline'), {
+            forceVerticalMode: 700,
+            mode: 'horizontal',
+            verticalStartPosition: 'left',
+            visibleItems: 4
+        });
+    </script>
+    <!-- <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script> -->
+</body>
+
+</html>
