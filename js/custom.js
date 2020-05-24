@@ -27,7 +27,21 @@ $(document).ready(function(){
 
 //zeki turist eğtim container
 $('#btnOlusturTurist').on('click',function(){
-	$('#touristKategorileri').show();
+
+	if(document.getElementById('projeAdiTurist').value!=""){
+		$('#touristKategorileri').show();
+
+		$('#ldsProjeOlusturTurist').show();
+	
+		$('#ldsProjeOlusturTurist').fadeOut(2000);	
+	
+		var projeadi=document.getElementById('projeAdiTurist').value;
+		document.getElementById('strongProjeAdi').innerHTML=projeadi;
+	}
+	else{
+		alert("Proje adı boş olamaz !!")
+	}
+
 })
 
 
