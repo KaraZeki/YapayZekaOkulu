@@ -2,6 +2,8 @@
     Version: 1.0
 /****************************************** */
 $(document).ready(function(){
+
+	//Shy Panda
 	$('.lds-facebook').hide();
 	$('#TumrResimler').hide();
 	$('#AyrilanResimler').hide();
@@ -13,12 +15,355 @@ $(document).ready(function(){
 	$('#dancePanda').hide();
 	$('#shamePanda').hide();
 
+    //Tourist İnfo
+	//$('#contTextMakEgitTourist').hide();
+	$('#tourisRehberTest').hide();
+	
+	$('#touristKategorileri').hide();
+	
+
+
+});
+
+//zeki turist eğtim container
+$('#btnOlusturTurist').on('click',function(){
+
+	if(document.getElementById('projeAdiTurist').value!=""){
+		$('#touristKategorileri').show();
+
+		$('#ldsProjeOlusturTurist').show();
+	
+		$('#ldsProjeOlusturTurist').fadeOut(2000);	
+	
+		var projeadi=document.getElementById('projeAdiTurist').value;
+		document.getElementById('strongProjeAdi').innerHTML=projeadi;
+	}
+	else{
+		alert("Proje adı boş olamaz !!")
+	}
+
+})
+
+
+//zeki turist rehberi çalıştır butonu
+$('#projeCalistirTurist').on('click',function(){
+	$('#tourisRehberTest').show();
+})
+
+//zeki metin ekleme******************************
+
+//müze Container
+var dizimuzeText=[];
+$('#btnEkle1').on('click', function () {
+
+	var muzeText=document.getElementById('inputMuze').value;
+	
+	if(muzeText=="")
+	{
+		alert("Boş Değer Girilemez");
+	}
+	else
+	{
+		document.getElementById('textMuze').innerHTML+=`</br>`+ muzeText;
+		dizimuzeText.push(muzeText);
+		document.getElementById('inputMuze').value="";
+	}
+	
+	
+});
+
+//balık container
+var dizibalıkText=[];
+$('#btnEkle2').on('click', function () {
+
+	var balıkText=document.getElementById('inputBalık').value;
+
+	if(balıkText=="")
+	{
+		alert("Boş Değer Girilemez");
+	}
+	else{
+		document.getElementById('textBalık').innerHTML+=`</br>`+ balıkText;
+		dizibalıkText.push(balıkText);
+		document.getElementById('inputBalık').value="";
+
+	}
+	
+	
+});
+
+//deniz container
+var dizidenizText=[];
+$('#btnEkle3').on('click', function () {
+
+	var denizText=document.getElementById('inputDeniz').value;
+	
+	if(denizText=="")
+	{
+		alert("Boş Değer Girilemez");
+	}
+	else{
+		document.getElementById('txtDeniz').innerHTML+=`</br>`+ denizText;
+		dizidenizText.push(denizText);
+		document.getElementById('inputDeniz').value="";
+	}
+	
+});
+
+//Yemek container
+var diziyemekText=[];
+$('#btnEkle4').on('click', function () {
+
+	var yemekText=document.getElementById('inputYemek').value;
+	
+	if(yemekText=="")
+	{
+		alert("boş değer girilemez");
+	}
+	else{
+		document.getElementById('txtYemek').innerHTML+=`</br>`+ yemekText;
+		diziyemekText.push(yemekText);
+		document.getElementById('inputYemek').value="";
+	}
+
+});
+
+
+//Otel container
+var diziotelText=[];
+$('#btnEkle5').on('click', function () {
+
+	var otelText=document.getElementById('inputOtel').value;
+	
+
+	if(otelText=="")
+	{
+		alert("boş değer girilemez");
+	}
+	else{
+		document.getElementById('txtOtel').innerHTML+=`</br>`+ otelText;
+		diziotelText.push(otelText);
+		document.getElementById('inputOtel').value="";
+	}
+
+});
+
+
+//Doğa container
+var dizidogaText=[];
+$('#btnEkle6').on('click', function () {
+
+	var dogaText=document.getElementById('inputDoga').value;
+
+	if(dogaText=="")
+	{
+		alert("boş değer girilemez");
+	}
+	else{
+		document.getElementById('txtDoga').innerHTML+=`</br>`+ dogaText;
+		dizidogaText.push(dogaText)
+		document.getElementById('inputDoga').value="";
+	}
 
 });
 
 
 
-var png=readURL("assadsad");
+//Zeki Chatbot
+
+//links
+//http://eloquentjavascript.net/09_regexp.html
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
+
+var messages = [], //array that hold the record of each string in chat
+  lastUserMessage = "", //keeps track of the most recent input string from the user
+  botMessage = "", //var keeps track of what the chatbot is going to say
+  botName = 'Raziye', //name of the chatbot
+  talking = true; //when false the speach function doesn't work
+//****************************************************************
+//edit this function to change what the chatbot says
+function chatbotResponse() {
+  talking = true;
+  botMessage = "Kafam Karıştı"; //the default message
+
+//dizimuzeText döngüsü
+for(i=0;i<=dizimuzeText.length;i++){
+	if (lastUserMessage === dizimuzeText[i]) {
+		botMessage = "Merhaba! Anladığım kadarı ile siz bir müze gezmek istiyorsunuz. Size şöyle bir müze önerebilirim "+`<a href="blog.html">Sanat Müzesi</a>`;
+
+		// const hi = ['selam','howdy','hello']
+		// botMessage = hi[Math.floor(Math.random()*(hi.length))];;
+	  }
+	
+	  if (lastUserMessage === 'name') {
+		botMessage = 'Adım Murtaza ' + botName;
+	  }
+  
+}
+//dizibalıkText döngüsü
+for(i=0;i<=dizibalıkText.length;i++){
+	if (lastUserMessage === dizibalıkText[i]) {
+		botMessage = "Merhaba! Galiba biraz balık tutmak ve deniz havası almak istiyorsunuz. Size şöyle bir yer önerebilirim "+`<a href="blog.html">Sanat Müzesi</a>`;
+
+		// const hi = ['selam','howdy','hello']
+		// botMessage = hi[Math.floor(Math.random()*(hi.length))];;
+	  }
+	
+	  if (lastUserMessage === 'name') {
+		botMessage = 'Adım Murtaza ' + botName;
+	  }
+}
+
+//dizidenizText döngüsü
+for(i=0;i<=dizidenizText.length;i++){
+	if (lastUserMessage === dizidenizText[i]) {
+		botMessage = "Merhaba! Yüzmek mi istiyorsunuz bakın burası harika "+`<a href="blog.html">Sanat Müzesi</a>`;
+
+		// const hi = ['selam','howdy','hello']
+		// botMessage = hi[Math.floor(Math.random()*(hi.length))];;
+	  }
+	
+	  if (lastUserMessage === 'name') {
+		botMessage = 'Adım Murtaza ' + botName;
+	  }
+}
+
+//diziyemekText döngüsü
+for(i=0;i<=diziyemekText.length;i++){
+	if (lastUserMessage === diziyemekText[i]) {
+		botMessage = "Merhaba! Acıktınız mı hadi o zaman yemek vakti "+`<a href="blog.html">Sanat Müzesi</a>`;
+
+		// const hi = ['selam','howdy','hello']
+		// botMessage = hi[Math.floor(Math.random()*(hi.length))];;
+	  }
+	
+	  if (lastUserMessage === 'name') {
+		botMessage = 'Adım Murtaza ' + botName;
+	  }
+}
+
+//diziotelText döngüsü
+for(i=0;i<=diziotelText.length;i++){
+	if (lastUserMessage === diziotelText[i]) {
+		botMessage = "Merhaba! Otel mi TRIVAGO :)). Size şöyle bir yer önerebilirim "+`<a href="blog.html">Sanat Müzesi</a>`;
+
+		// const hi = ['selam','howdy','hello']
+		// botMessage = hi[Math.floor(Math.random()*(hi.length))];;
+	  }
+	
+	  if (lastUserMessage === 'name') {
+		botMessage = 'Adım Murtaza ' + botName;
+	  }
+}
+
+//dizidogaText döngüsü
+for(i=0;i<=dizidogaText.length;i++){
+	if (lastUserMessage === dizidogaText[i]) {
+		botMessage = "Merhaba! Bende bende sizin gibi doğayı severim. Burayı mutlaka förmelisiniz "+`<a href="blog.html">Sanat Müzesi</a>`;
+
+		// const hi = ['selam','howdy','hello']
+		// botMessage = hi[Math.floor(Math.random()*(hi.length))];;
+	  }
+	
+	  if (lastUserMessage === 'name') {
+		botMessage = 'Adım Murtaza ' + botName;
+	  }
+}
+  
+}
+
+
+
+//
+//this runs each time enter is pressed.
+//It controls the overall input and output
+function newEntry() {
+  //if the message from the user isn't empty then run 
+  if (document.getElementById("chatbox").value != "") {
+    //pulls the value from the chatbox ands sets it to lastUserMessage
+    lastUserMessage = document.getElementById("chatbox").value;
+    //sets the chat box to be clear
+    document.getElementById("chatbox").value = "";
+    //adds the value of the chatbox to the array messages
+    messages.push(lastUserMessage);
+    //Speech(lastUserMessage);  //says what the user typed outloud
+    //sets the variable botMessage in response to lastUserMessage
+    chatbotResponse();
+    //add the chatbot's name and message to the array messages
+    messages.push("<b>" + botName + ":</b> " + botMessage);
+    // says the message using the text to speech function written below
+    Speech(botMessage);
+    //outputs the last few array elements of messages to html
+    for (var i = 1; i < 8; i++) {
+      if (messages[messages.length - i])
+        document.getElementById("chatlog" + i).innerHTML = messages[messages.length - i];
+    }
+  }
+}
+
+//text to Speech
+//https://developers.google.com/web/updates/2014/01/Web-apps-that-talk-Introduction-to-the-Speech-Synthesis-API
+function Speech(say) {
+  if ('speechSynthesis' in window && talking) {
+	var utterance = new SpeechSynthesisUtterance(say);
+    //msg.voice = voices[10]; // Note: some voices don't support altering params
+    //msg.voiceURI = 'native';
+    //utterance.volume = 1; // 0 to 1
+    //utterance.rate = 0.1; // 0.1 to 10
+    //utterance.pitch = 1; //0 to 2
+    //utterance.text = 'Hello World';
+    utterance.lang = 'tr-TR';
+    speechSynthesis.speak(utterance);
+  }
+}
+
+//runs the keypress() function when a key is pressed
+document.onkeypress = keyPress;
+//if the key pressed is 'enter' runs the function newEntry()
+function keyPress(e) {
+  var x = e || window.event;
+  var key = (x.keyCode || x.which);
+  if (key == 13 || key == 3) {
+    //runs this function when enter is pressed
+    newEntry();
+  }
+  if (key == 38) {
+    console.log('hi')
+      //document.getElementById("chatbox").value = lastUserMessage;
+  }
+}
+
+//clears the placeholder text ion the chatbox
+//this function is set to run when the users brings focus to the chatbox, by clicking on it
+function placeHolder() {
+  document.getElementById("chatbox").placeholder = "";
+}
+
+
+
+//zeki
+function myFunction() {
+	var node = document.createElement("LI").value;
+	var textnode = document.createTextNode(node);
+	node.appendChild(textnode);
+	document.getElementById("myList").appendChild(node);
+  }
+
+
+//Zeki kodlar
+
+$('#createProjectTourist').on('click', function () {
+
+	var projeadi=document.getElementById('projeAdi').value;
+	
+	document.getElementById('strongProjeAdiTourist').innerHTML=projeadi;
+	 $('#ldsProjeOlustur').show();
+	 $('#contTextMakEgitTourist').show();
+	 $('#ldsProjeOlustur').fadeOut(2000);	 
+	 
+	
+});
 
 
 //Fotoğraf yükleme
@@ -68,7 +413,6 @@ function readURL(input) {
 		
 	}
 }
-
 
 
   
