@@ -17,6 +17,10 @@ $(document).ready(function(){
 });
 
 
+
+var png=readURL("assadsad");
+
+
 //Fotoğraf yükleme
 
 function readURL(input) {
