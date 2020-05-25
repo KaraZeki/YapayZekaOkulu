@@ -167,11 +167,129 @@ $('#projeCalistirTurist').on('click', function () {
 
 //zeki metin ekleme******************************
 
+var dizibitkiText=[];
+$('#btnEkle8').on('click', function () {
 
+	var bitkiText=document.getElementById('inputBitki').value;
+
+	if(bitkiText=="")
+	{
+		alert("Boş Değer Girilemez");
+	}
+	else{
+		document.getElementById('textBitki').innerHTML+=`</br>`+ bitkiText;
+		dizibitkiText.push(bitkiText);
+		document.getElementById('inputBitki').value="";
+
+	}
+	
+	
+});
+
+
+//Ulkeler container
+var diziulkelerText=[];
+$('#btnEkle9').on('click', function () {
+
+	var ulkelerText=document.getElementById('inputUlkeler').value;
+	
+	if(ulkelerText=="")
+	{
+		alert("Boş Değer Girilemez");
+	}
+	else{
+		document.getElementById('txtUlkeler').innerHTML+=`</br>`+ ulkelerText;
+		diziulkelerText.push(ulkelerText);
+		document.getElementById('inputUlkeler').value="";
+	}
+	
+});
+
+
+
+//Gezi container
+var dizigeziText=[];
+$('#btnEkle11').on('click', function () {
+
+	var geziText=document.getElementById('inputGezi').value;
+	
+
+	if(geziText=="")
+	{
+		alert("boş değer girilemez");
+	}
+	else{
+		document.getElementById('txtGezi').innerHTML+=`</br>`+ geziText;
+		dizigeziText.push(geziText);
+		document.getElementById('inputGezi').value="";
+	}
+
+});
+
+
+//Muhhabbet container
+var dizimuhabbetText=[];
+$('#btnEkle12').on('click', function () {
+
+	var muhabbetText=document.getElementById('inputMuhabbet').value;
+
+	if(muhabbetText=="")
+	{
+		alert("boş değer girilemez");
+	}
+	else{
+		document.getElementById('txtMuhabbet').innerHTML+=`</br>`+ muhabbetText;
+		dizimuhabbetText.push(muhabbetText)
+		document.getElementById('inputMuhabbet').value="";
+	}
+
+});
+
+
+/////////////////////////////////////////
+
+//Meyve container
+var dizimeyveText=[];
+$('#btnEkle10').on('click', function () {
+
+	var meyveText=document.getElementById('inputMeyve').value;
+	
+	if(meyveText=="")
+	{
+		alert("boş değer girilemez");
+	}
+	else{
+		document.getElementById('txtMeyve').innerHTML+=`</br>`+ meyveText;
+		dizimeyveText.push(meyveText);
+		document.getElementById('inputMeyve').value="";
+	}
+
+});
+
+
+//Hayvan counter
+var dizihayvanText=[];
+$('#btnEkle7').on('click', function () {
+
+	var hayvanText=document.getElementById('inputHayvan').value;
+	
+	if(hayvanText=="")
+	{
+		alert("Boş Değer Girilemez");
+	}
+	else
+	{
+		document.getElementById('textHayvan').innerHTML+=`</br>`+ hayvanText;
+		dizihayvanText.push(hayvanText);
+		document.getElementById('inputHayvan').value="";
+	}
+	
+	
+});
 
 //müze Container
 var dizimuzeText = [];
-$('#btnEkle1').on('click', function () {
+$('#btnEkle7').on('click', function () {
 
 	var muzeText = document.getElementById('inputMuze').value;
 
@@ -354,9 +472,76 @@ function chatbotResponse() {
 		if (lastUserMessage === 'name') {
 			botMessage = 'My name is ' + botName;
 		}
+	
+	
+	}
+	//Fatih Arıcılık
+	for(i=0;i<=dizihayvanText.length;i++){
+		if(lastUserMessage==dizihayvanText[i]){
+			botMessage="Heyvanmı sormak istedin";
+		}
+		
+	 if (lastUserMessage === 'name') {
+	   botMessage = 'My name is ' + botName;
+	 }
+
 	}
 
 
+	
+	for(i=0;i<=dizibitkiText.length;i++){
+		if(lastUserMessage==dizibitkiText[i]){
+			botMessage="Bitkiler hakkında konuşalım";
+		}
+		
+	 if (lastUserMessage === 'name') {
+	   botMessage = 'My name is ' + botName;
+	 }
+	}
+	
+	
+	for(i=0;i<=diziulkelerText.length;i++){
+		if(lastUserMessage==diziulkelerText[i]){
+			botMessage="Bu bir ülke";
+		}
+		
+	 if (lastUserMessage === 'name') {
+	   botMessage = 'My name is ' + botName;
+	 }
+	}
+	
+	for(i=0;i<=dizimeyveText.length;i++){
+		if(lastUserMessage==dizimeyveText[i]){
+			botMessage="AÇ Mısın";
+		}
+		
+	 if (lastUserMessage === 'name') {
+	   botMessage = 'My name is ' + botName;
+	 }
+	}
+	
+	for(i=0;i<=dizigeziText.length;i++){
+		if(lastUserMessage==dizigeziText[i]){
+			botMessage="Gezmeyide iyi biliyon";
+		}
+		
+	 if (lastUserMessage === 'name') {
+	   botMessage = 'My name is ' + botName;
+	 }
+	}
+	
+	
+	for(i=0;i<=dizimuhabbetText.length;i++){
+		if(lastUserMessage==dizimuhabbetText[i]){
+			botMessage="Senle Muhabbet etmek güzel";
+		}
+		
+	 if (lastUserMessage === 'name') {
+	   botMessage = 'My name is ' + botName;
+	 }
+	 
+	}
+	
 	//   if (lastUserMessage === 'hi' || lastUserMessage =='hello') {
 	//     const hi = ['hi','howdy','hello']
 	//     botMessage = hi[Math.floor(Math.random()*(hi.length))];;
