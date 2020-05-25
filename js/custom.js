@@ -289,7 +289,7 @@ $('#btnEkle7').on('click', function () {
 
 //müze Container
 var dizimuzeText = [];
-$('#btnEkle7').on('click', function () {
+$('#btnEkle1').on('click', function () {
 
 	var muzeText = document.getElementById('inputMuze').value;
 
