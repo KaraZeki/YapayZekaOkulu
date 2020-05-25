@@ -396,6 +396,10 @@ $('#btnEkle6').on('click', function () {
 });
 
 
+
+
+
+
 //Zeki chatbot
 //links
 //http://eloquentjavascript.net/09_regexp.html

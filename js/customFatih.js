@@ -22,7 +22,7 @@ $(document).ready(function(){
 
     //Tourist İnfo
 	//$('#contTextMakEgitTourist').hide();
-	$('#tourisRehberTest').hide();
+	$('#tourisRehberTest').show();
 	
 	$('#touristKategorileri').hide();
 	
@@ -252,6 +252,7 @@ var messages = [], //array that hold the record of each string in chat
 
 //edit this function to change what the chatbot says
 function chatbotResponse() {
+
   talking = true;
   botMessage = "I'm confused"; //the default message
 
