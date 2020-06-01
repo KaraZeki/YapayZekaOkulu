@@ -166,7 +166,7 @@ $('#projeCalistirTurist').on('click', function () {
 })
 
 //zeki metin ekleme******************************
-
+//Bitki -Fatih
 var dizibitkiText=[];
 $('#btnEkle8').on('click', function () {
 
@@ -187,7 +187,7 @@ $('#btnEkle8').on('click', function () {
 });
 
 
-//Ulkeler container
+//Ulkeler container - Fatih
 var diziulkelerText=[];
 $('#btnEkle9').on('click', function () {
 
@@ -207,7 +207,7 @@ $('#btnEkle9').on('click', function () {
 
 
 
-//Gezi container
+//Gezi container - Fatih
 var dizigeziText=[];
 $('#btnEkle11').on('click', function () {
 
@@ -227,7 +227,7 @@ $('#btnEkle11').on('click', function () {
 });
 
 
-//Muhhabbet container
+//Muhhabbet container -Fatih
 var dizimuhabbetText=[];
 $('#btnEkle12').on('click', function () {
 
@@ -248,7 +248,7 @@ $('#btnEkle12').on('click', function () {
 
 /////////////////////////////////////////
 
-//Meyve container
+//Meyve container - Fatih
 var dizimeyveText=[];
 $('#btnEkle10').on('click', function () {
 
@@ -267,7 +267,7 @@ $('#btnEkle10').on('click', function () {
 });
 
 
-//Hayvan counter
+//Hayvan counter -Fatih 
 var dizihayvanText=[];
 $('#btnEkle7').on('click', function () {
 
@@ -394,10 +394,6 @@ $('#btnEkle6').on('click', function () {
 	}
 
 });
-
-
-
-
 
 
 //Zeki chatbot

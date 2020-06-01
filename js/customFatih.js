@@ -22,7 +22,7 @@ $(document).ready(function(){
 
     //Tourist İnfo
 	//$('#contTextMakEgitTourist').hide();
-	$('#tourisRehberTest').show();
+	$('#tourisRehberTest').hide();
 	
 	$('#touristKategorileri').hide();
 	
@@ -179,20 +179,20 @@ $('#btnEkle3').on('click', function () {
 	
 });
 
-//Yemek container
-var diziyemekText=[];
+//Meyve container
+var dizimeyveText=[];
 $('#btnEkle4').on('click', function () {
 
-	var yemekText=document.getElementById('inputYemek').value;
+	var meyveText=document.getElementById('inputMeyve').value;
 	
-	if(yemekText=="")
+	if(meyveText=="")
 	{
 		alert("boş değer girilemez");
 	}
 	else{
-		document.getElementById('txtYemek').innerHTML+=`</br>`+ yemekText;
-		diziyemekText.push(yemekText);
-		document.getElementById('inputYemek').value="";
+		document.getElementById('txtMeyve').innerHTML+=`</br>`+ meyveText;
+		dizimeyveText.push(meyveText);
+		document.getElementById('inputMeyve').value="";
 	}
 
 });
@@ -252,7 +252,6 @@ var messages = [], //array that hold the record of each string in chat
 
 //edit this function to change what the chatbot says
 function chatbotResponse() {
-
   talking = true;
   botMessage = "I'm confused"; //the default message
 
