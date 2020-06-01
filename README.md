@@ -10,4 +10,4 @@ bilimsel gelişmelere erken uyum sağlanması hedeflenmektedir.
 ## Platformlar Hakkında
 <p> 5 oyun Web, 5 oyun Windows Form Application olarak 2 ortamda geliştirilmiştir. Fatih Arıcılık ve Mehmet Zeki Kara Web üzerinde 
 çalışırken, Onur Yeşil, Mahmut Çapkın ve Yakup Güçlü C# ile geliştirme yapmıştır. Ve ana menü tasarımı için  Bunifu Framework
-kullanıldığından projeyi çalıştırmak isteyenlerde Bunifu Framework yüklü olmalıdır
+kullanıldığından projeyi çalıştırmak isteyenlerde Bunifu Framework yüklü olmalıdır.Aksi takdirde proje çalışmayacaktır.
