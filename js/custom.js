@@ -29,12 +29,12 @@ $(document).ready(function () {
 
 	//Kiwi or Stoat 
 
-	// $('#contTextMakEgitKiwi').hide();
-	// $('#TumrResimlerKiwi').hide();
-	// $('#AyrilanResimlerKiwi').hide();
-	// $('#contButtonGrupKiwi').hide();
-	// $('#contTestTextKiwi').hide();
-	//$('#contResimTestetKiwi').hide();
+	$('#contTextMakEgitKiwi').hide();
+	$('#TumrResimlerKiwi').hide();
+	$('#AyrilanResimlerKiwi').hide();
+	$('#contButtonGrupKiwi').hide();
+	$('#contTestTextKiwi').hide();
+	$('#contResimTestetKiwi').hide();
 
 	$('#kiwiResimSecilmedi').show();
 	$('#kalkımBilgisi').hide();
@@ -76,66 +76,6 @@ $('#projeCalistirKiwi').on('click', function () {
 	$('#prjeCalistirKiwi').show();
 	$('#prjeCalistirKiwi').fadeOut(2000);
 })
-
-
-
-// Fatih Postacı
-// function readURLposta(input) {
-// 	if (input.files && input.files[0]) {
-// 		var reader = new FileReader();
-
-// 		reader.onload = function (e) {
-// 			$('#blah')
-// 				.attr('src', e.target.result)
-// 				.width(100)
-// 				.height(100);
-
-// 			var $a = document.getElementById("cardfotosec");
-// 			var $img = $a.getElementsByTagName("img")[0];
-
-// 			var PostaciSOp = ["PostacıSO.jpg", "avatar-01.jpg", "avatar-02.jpg", "avatar-03.jpg", "boy-717151_640.jpg", "c070e411ac.jpg", "images.jfif", "indir (1).jfif", "indir.jfif", "testi_01.png"];
-// 			var PostaciOXp = ["images (1).jfif", "images (2).jfif", "images (3).jfif", "images (4).jfif", "images (5).jfif", "images (6).jfif", "indir (2).jfif", "indir (3).jfif", "indir (4).jfif", "indir (5).jfif"];
-// 			var PostaciGUp = ["images (1).jfif", "images (2).jfif", "images (3).jfif", "images (4).jfif", "images (5).jfif", "images (6).jfif", "indir (2).jfif", "indir (3).jfif", "indir (4).jfif", "indir (5).jfif"];
-
-// 			for (i = 0; i <= PostaciOXp.length; i++) {
-// 				if (input.value.replace(/^.*[\\\/]/, '') == PostaciOXp[i]) {
-// 					$('#Postaci').hide()
-// 					$('#PostaciSO').hide();
-// 					$('#PostaciOX').show();
-// 					$('#PostaciGU').hide();
-// 				}
-
-// 			}
-
-// 			//alert(input.value.replace(/^.*[\\\/]/, ''));
-// 			for (y = 0; y <= PostaciGUp.length; y++) {
-// 				if (input.value.replace(/^.*[\\\/]/, '') == PostaciGUp[y]) {
-
-// 					$('#Postaci').hide()
-// 					$('#PostaciSO').hide();
-// 					$('#PostaciOX').hide();
-// 					$('#PostaciGU').show();
-// 				}
-// 			}
-
-// 			for (z = 0; y <= PostaciSOp.length; z++) {
-// 				if (input.value.replace(/^.*[\\\/]/, '') == PostaciSOp[z]) {
-
-// 					$('#Postaci').hide()
-// 					$('#PostaciSO').show();
-// 					$('#PostaciOX').hide();
-// 					$('#PostaciGU').hide();
-// 				}
-// 			}
-
-// 		};
-
-
-// 		reader.readAsDataURL(input.files[0]);
-
-
-// 	}
-// }
 
 
 
@@ -417,7 +357,7 @@ function chatbotResponse() {
 
 	for (i = 0; i <= dizimuzeText.length; i++) {
 		if (lastUserMessage == dizimuzeText[i]) {
-			botMessage = "Selam Bebek Mıgo Ben Kelebek";
+			botMessage = "Louvre:  Paris’in ünlü Louvre Müzesi dünyanın en büyük ve en çok ziyaret edilen müzesi. 1684 yılından beri dünya çapında bir müze olan Louvre, çok sayıda ünlü esere ev sahipliği yapıyor. Yıllık ziyaretçi sayısı ise 10.2 milyonu buluyor.";
 		}
 
 		if (lastUserMessage === 'name') {
@@ -427,7 +367,7 @@ function chatbotResponse() {
 
 	for (i = 0; i <= dizibalıkText.length; i++) {
 		if (lastUserMessage == dizibalıkText[i]) {
-			botMessage = "Hamsi Kafalu Ne Yabucaun";
+			botMessage = "İzmirde Olta Balıkçılığı İzmir, birçok Amatör Balıkçının olmayı istediği Türkiyenin en önemli balık cennetlerinden biridir. Yüzlerce balık çeşidi ve muntazam koylarıyla İzmir'de balık severlerin mutlu olmaması gerçekdende mümkün değil. Bizde Avlak Yeri ekibi olarak çoğunlukla Ege denizinde avlandığımızdan bu bölgenin ne kadar bereketli olduğunu en iyi bilenlerdeniz. Özelikle geçit zamanı Yunan adalarıyla bizim kıyı şeritlerimiz arasında tekne ile avlananlar kıyıdan avlananlara nazaran daha çok balık yakalarlar. Fakat yerini bildikden sonra İzmirin koylarındada bol miktarda balık avlama imkanı vardır. Bizim de amacımız ziyaretçilerimize bu koyları deyatlıca anlatıp İzmir ve diğer sahil beldelerimizin imkanlarından faydalanabilmesini sağlamaktır.İzmir Meralarıİzmir Körfezi Ege'nin birçok balık türüne ev sahipliği yapan bir bölge. Güzelbahçe ile Çiğli arası iç körfez diye anılırken, buradan başlayıp Karaburun Foça beldelerine kadar kalan kısım ise dış körfez olur. Aralarındaki fark iç körfezde dağların rüzgarı engelleyerek denizin nispeten daha sakin olması. Buna karşın Karaburun ve Foça çok rüzgar alan sahil beldelerimizidir. Aynı zamanda bu iki güzide tatil beldesi, yaz kış balık verme potansiyeline sahip olduğundan Amatör Balıkçılarında en çok sevdikleri yerlerdir. Sitemizde İzmir'deki meralar hakkında size kapsamlı bilgiler vererek, balık avından boş dönmemenizi sağlamayı umuyoruz. Yani İzmir'de nerelerden avlanılır, hangi Mera'da ne tür olta takımları kullanmalısınız, İzmir'de hangi meradan ne tür balıklar çıkar, hangi mevsimde ne yakalanır gibi en çok sorulan sorularında cevaplarını bulacaksınız. Umarız faydalı olabilmişizdir.";
 		}
 
 		if (lastUserMessage === 'name') {
@@ -437,7 +377,7 @@ function chatbotResponse() {
 
 	for (i = 0; i <= dizidenizText.length; i++) {
 		if (lastUserMessage == dizidenizText[i]) {
-			botMessage = "Yüzmen Lazım";
+			botMessage = "1. İztuzu, Dalyan, Muğla Muğla Ortaca’ya bağlı Dalyan’ın dünyaca ünlü plajı olan İztuzu, doğasıyla büyüleyen Likya’nın kıyısında koruma altına alınan bir bölgede yer alıyor. Kristal gibi berrak ve kadifemsi kumu, turkuaz ve pırıl pırıl denizi ile dünyanın en iyi plajları arasında yer alıyor. Dünyadan ve ülkemizden binlerce turiste ev sahipliği yapan İztuzu, Caretta Caretta kaplumbağalarının da yumurtlama dönemlerinde ziyaret ettiği nadide yerlerden biridir.";
 		}
 
 		if (lastUserMessage === 'name') {
@@ -447,7 +387,7 @@ function chatbotResponse() {
 
 	for (i = 0; i <= diziyemekText.length; i++) {
 		if (lastUserMessage == diziyemekText[i]) {
-			botMessage = "AÇ Mısın";
+			botMessage = "Etin her çeşidiyle karşılaşmanın mümkün olduğu Diyarbakır’da, farklı kültürlerin mutfaklarıyla karşılaşıyoruz. Ciğer kebabı, kaburga dolması, çiğköfte, duvaklı pilav ve burma kadayıf şehrin en önemli lezzetleri arasında.";
 		}
 
 		if (lastUserMessage === 'name') {
@@ -466,7 +406,7 @@ function chatbotResponse() {
 	}
 	for (i = 0; i <= dizidogaText.length; i++) {
 		if (lastUserMessage == dizidogaText[i]) {
-			botMessage = "Ağrı DağınE	Eteğinde ";
+			botMessage = "Doğa mı? - Kanada Çoğu kişinin -30 dereceleri bulan soğuk iklimi nedeni ile uzak durduğu Kanada, sert iklimine rağmen eşsiz doğal güzellikleri ve rahat bir yaşam sunan ekonomik koşullarıyla gözde bir yerleşim yeri. Ülkede bulunan Moraine Gölü, Twelve Apostles ve dünyanın en muhteşem doğa harikalarından olan Sam Fiyortu’nun güzelliği, Kanada’ya gelen ziyaretçileri etkisi altına alıyor.";
 		}
 
 		if (lastUserMessage === 'name') {
@@ -697,7 +637,7 @@ function readURL(input) {
 $('#btnOlustur').on('click', function () {
 
 	var projeadi = document.getElementById('projeAdi').value;
-
+if(projeadi!=""){
 	document.getElementById('strongProjeAdi').innerHTML = projeadi;
 	$('#ldsProjeOlustur').show();
 
@@ -709,6 +649,11 @@ $('#btnOlustur').on('click', function () {
 	$('#contButtonGrup').show();
 
 
+}
+else{
+	alert("proje adı boş olamaz");
+}
+	
 });
 
 
